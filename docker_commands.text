@@ -1,1 +1,4 @@
 docker system prune -a -f # To remove all unused containers, networks, images 
+
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id # To get ip of container
+
